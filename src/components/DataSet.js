@@ -12,9 +12,9 @@ export default function DataSet({ currentNumberData, onSetNumberData, currentDat
 
     const handleDatasetOnClick = () => {
         if (currentNumberData !== "") {
-            const copyArr = currentDataset.slice()
-            copyArr.push(currentNumberData)
-            onSetDataset(copyArr)
+            const copyCurrentDataSet = currentDataset.slice()
+            copyCurrentDataSet.push(currentNumberData)
+            onSetDataset(copyCurrentDataSet)
             onSetNumberData("")
         }
     }
@@ -22,22 +22,31 @@ export default function DataSet({ currentNumberData, onSetNumberData, currentDat
     const handleEnterUpOnKeyPress = (e) => {
         if (e.code === "Enter") {
             if (currentNumberData !== "") {
-                const copyArr = currentDataset.slice()
-                copyArr.push(currentNumberData)
-                onSetDataset(copyArr)
+                const copyCurrentDataSet = currentDataset.slice()
+                copyCurrentDataSet.push(currentNumberData)
+                onSetDataset(copyCurrentDataSet)
                 onSetNumberData("")
             }
         }
     }
 
-    const onClearData = () => {
+    const onResetData = () => {
         onSetDataset([])
+    }
+
+    const onClearLastData = () => {
+        const copyCurrentDataSet = currentDataset.slice()
+        copyCurrentDataSet.splice(-1,1)
+        onSetDataset(copyCurrentDataSet)
     }
 
     return (
         <>
-            <button onClick={onClearData} className="absolute top-8 right-8 underline">
+            <button onClick={onResetData} className="absolute top-8 right-8 underline">
                 clear data set
+            </button>
+            <button onClick={onClearLastData} className="absolute top-16 right-8 underline">
+                clear last data
             </button>
             <div className="w-1/2 mx-auto flex flex-col gap-4 mt-36">
                 <input type="number" value={currentNumberData} onChange={handleNumberDataOnChange} onKeyUp={handleEnterUpOnKeyPress} placeholder="Enter data" className="text-center p-4 border-2 border-slate-800 rounded-3xl outline-none placeholder:text-slate-500" />
