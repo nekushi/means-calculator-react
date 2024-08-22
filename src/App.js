@@ -19,7 +19,6 @@ export default function App() {
                         onSetDataset={setDataset}
                     />
                 }></Route>
-                {/* <Route path="/dataset" element={<DataSet />}></Route> */}
                 <Route path="/graph" element={
                     <Graph 
                         currentDataset={dataset} 

@@ -17,13 +17,13 @@ export function createRandomColor() {
   return hexColorCode
 }
 
-export default function Graph({ children, currentDataset }) {
+export default function Graph({ currentDataset }) {
   const navigate = useNavigate()
 
   const handlePathToHome = () => {
     navigate("/")
   }
-
+  
   const data = [
     ["Mean", "Calculated means"],
     ["MD", calculateMedian(currentDataset)],
