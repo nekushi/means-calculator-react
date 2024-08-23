@@ -30,7 +30,7 @@ export default function DataSet({ currentNumberData, onSetNumberData, currentDat
         }
     }
 
-    const onResetData = () => {
+    const onResetNumberData = () => {
         onSetDataset([])
     }
 
@@ -42,7 +42,7 @@ export default function DataSet({ currentNumberData, onSetNumberData, currentDat
 
     return (
         <>
-            <button onClick={onResetData} className="absolute top-8 right-8 underline">
+            <button onClick={onResetNumberData} className="absolute top-8 right-8 underline">
                 clear data set
             </button>
             <button onClick={onClearLastData} className="absolute top-16 right-8 underline">
