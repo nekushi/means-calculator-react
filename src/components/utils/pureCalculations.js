@@ -27,7 +27,7 @@ export function calculateGeometricMean(arr) {
 }
 
 export function calculateHarmonicMean(arr) {
-    let getHM = arr.reduce((x, y) => parseFloat(x) + parseFloat(1/y), 1)
-    console.log(`Harmonic Mean: ${arr.length / (getHM - 1)}`);
-    return arr.length / (getHM - 1)
+    let getHM = arr.reduce((x, y) => parseFloat(x) + parseFloat(1/y), 0)
+    console.log(`Harmonic Mean: ${arr.length / (getHM)}`);
+    return arr.length / (getHM)
 }
