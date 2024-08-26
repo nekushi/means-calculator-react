@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/means-calculator-react/static/css/main.37dd9fac.css",
+    "main.js": "/means-calculator-react/static/js/main.236abf80.js",
+    "index.html": "/means-calculator-react/index.html",
+    "main.37dd9fac.css.map": "/means-calculator-react/static/css/main.37dd9fac.css.map",
+    "main.236abf80.js.map": "/means-calculator-react/static/js/main.236abf80.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.37dd9fac.css",
+    "static/js/main.236abf80.js"
+  ]
+}
